@@ -1,0 +1,29 @@
+{
+  "name": "node-sql-exercise",
+  "version": "1.0.0",
+  "description": "Connect your NodeJS application to PostgreSQL",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juliagronau/node-sql-exercise.git"
+  },
+  "keywords": [
+    "nodejs",
+    "sql",
+    "express",
+    "postgresql"
+  ],
+  "author": "julia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juliagronau/node-sql-exercise/issues"
+  },
+  "homepage": "https://github.com/juliagronau/node-sql-exercise#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
