@@ -35,6 +35,15 @@ export const createUser = (req, res) => {
     .catch((err) => res.status(404).json(err));
 };
 
+//Da die ID des Users ein FK im Orders table ist, 
+//können User, die bereits Bestellungen aufgegeben haben,
+//nicht gelöscht werden.
+//Dieser Controller funktioniert also nur bei Usern, die
+//keine Bestellung aufgegeben haben.
+//Mögliche Ansätze:
+//- erst diejenigen orders löschen, where orders.user_id = id, dann erst den user;
+//- im .catch() ein if einbauen, das prüft, ob der Fehler aus der o.g. Problematik herrührt
+//und ensprechenden Hinweis als Response an den Client schicken (zB Bitte erst orders des users löschen oder user inaktiv setzen statt löschen)
 export const deleteUser = (req, res) => {
   const { id } = req.params;
   pool
